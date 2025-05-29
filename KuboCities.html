@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G e o K u b o</title>
+    <style>
+        /* === Y2K GLOBAL STYLES === */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Comic Sans MS", "Arial", sans-serif;
+            background-color: #000000;
+            color: #00FF00;
+            background-image: url('https://i.imgur.com/8KQmXJq.gif'); /* Tiled pixel BG */
+            line-height: 1.5;
+        }
+
+        /* === SCROLL SECTIONS (MODERN FUNCTIONALITY) === */
+        .poem-section {
+          scroll-snap-align: start;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+			gap:0;
+        }
+		
+		p{
+		 border:0;
+		 padding:0;
+		 margin:0;
+		}
+
+        /* === SECTION THEMES (COLOR/FONT CHANGES) === */
+        #section1 {
+            background-color: #000066;
+            color: #FFFF00;
+            font-family: "Times New Roman", serif;
+        }
+        #section2 {
+            background-color: #660066;
+            color: #00FFFF;
+            font-family: "Courier New", monospace;
+        }
+        #section3 {
+            background-color: #006600;
+            color: #FF00FF;
+            font-family: "Impact", fantasy;
+        }
+
+        /* === RETRO ELEMENTS === */
+        .pixel-divider {
+            width: 100%;
+            height: 60px;
+            background-image: url('bambouanime.gif'); /* Animated divider */
+            margin: 10px 0;
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .webring {
+            border: 3px dashed #FF00FF;
+            padding: 5px;
+            margin: 20px;
+        }
+
+        /* === MODERN INTERACTIVITY === */
+        .popover-gif {
+            cursor: help;
+            border: 2px solid #FFFFFF;
+        }
+        .popover-gif:hover::after {
+            content: attr(data-popover);
+            position: absolute;
+            background: #000000;
+            color: #FFFFFF;
+            padding: 10px;
+            border: 2px solid #FF0000;
+            max-width: 200px;
+            transform: translate(-50%, -100%);
+        }
+
+        /* === RESPONSIVE FALLBACKS === */
+        @media (max-width: 600px) {
+            .poem-section {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECTION 1: INTRO -->
+    <div id="section1" class="poem-section">
+        <img src="KuboCities.png" alt="Under Construction GIF" width="600">
+        <h1>/KUBO<span class="blink">CITIES</span>/</h1>
+        <div class="pixel-divider"></div>
+        <p>The New Millenium</p>
+		<img src="UC2.gif" width="200">
+		<p>as if already collpasing</p>
+		<p>into Marikina, and neighboring</p>
+		<p>FLOOD ZONES</p>
+		<img src="scared.jpg">
+		<p>ever look back</p>
+		<img src="nok.gif">
+		<br><br>
+		<img src="coming_soon.gif">
+		<p>kahit ilang</p>
+		<p>"OO" O "HINDI"</p>
+		<p>mangyayari at</p>
+		<p>yahoo! na lang dot com</p>
+		<p>wut do they want us to say to that?</p> 
+		<p>it rolls in like a mobile</p>
+		<br><br>
+		<p>"All I heard outside my apartment</p>
+		<p>is the sound of people rallying."</p>
+		<p>another president down</p>
+		<img src="roasting.gif">
+		<p>fav q tlga yn</p>
+		<p>and sure send the terrorism</p>
+		<img src="starbar.gif">
+		<p>neutralizers in</p>
+		<br><br>
+		<p>malls have started</p>
+		<p>to check our bags.</p>
+		<p>Mindanao is on fire</p>
+		<p>I'm just thinking </p>
+		<p>what we're all thinking</p>
+		<img src="third.jpg"><br>
+		<img src="filipinoflag3d.gif"><br>
+		<img src="contador.gif">
+		<br><br>
+		<br><br>
+		
+		<p></p>
+				
+			
+		
+		
+		
+        <!--<p>Hosted on: <img src="https://i.imgur.com/9Z7Wz9J.gif" alt="GeoCities logo" width="80"></p>
+        
+        POPOVER GIF EXAMPLE
+        <img src="https://i.imgur.com/7X9vQ9T.gif" 
+             class="popover-gif" 
+             data-popover="Dial-up tone: The sound of 2002" 
+             alt="Floppy disk GIF">
+    </div> -->
+
+    <!-- SECTION 2: POEM 
+    <div id="section2" class="poem-section">
+        <h2>BARANGAY.COM</h2>
+        <div class="pixel-divider"></div>
+        <pre>
+  Your AOL disc pirated in Greenhills
+  boots up like a jeepney coughing smoke.
+  The internet café charges ₱15/hour
+  to load a pixelated jpeg of EDSA—
+  <span class="blink">(404: Revolution Not Found)</span>
+        </pre>
+        <!-- EMBED EXAMPLE (MODERN FUNCTIONALITY) 
+        <iframe width="200" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" frameborder="0"></iframe>
+    </div>
+
+    <!-- SECTION 3: WEBRING FOOTER 
+    <div id="section3" class="poem-section">
+        <div class="webring">
+            <marquee>YOU ARE VISITOR #<span id="counter">0000001</span></marquee>
+            <p>Join the <a href="#">GeoKubo Webring</a>!</p>
+        </div>
+        <img src="https://i.imgur.com/5R5hW9F.gif" alt="Best viewed with Netscape">
+    </div>-->
+
+    <!-- RETRO JS (VISITOR COUNTER) -->
+    <script>
+        // Blinking cursor effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fake visitor counter
+            let count = 1;
+            setInterval(() => {
+                count++;
+                document.getElementById('counter').textContent = 
+                    count.toString().padStart(7, '0');
+            }, 3000);
+
+            // Simple popover functionality
+            document.querySelectorAll('.popover-gif').forEach(el => {
+                el.addEventListener('click', () => {
+                    alert(el.dataset.popover);
+                });
+            });
+        });
+    </script>
+	
+	<!-- Add this NEW SECTION before the </body> tag -->
+<div id="guestbook-section" class="poem-section" style="background-color: #FF00FF; color: #000000; font-family: 'Comic Sans MS', cursive;">
+    <h2><img src="sign-guestbook-animation.gif" alt="Guestbook"> SIGN OUR GUESTBOOK</h2>
+    <div class="pixel-divider"></div>
+    
+    <!-- Guestbook Form (Submits to free service) -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <table border="0" cellpadding="5" style="margin: 0 auto;">
+            <tr>
+                <td>name</td>
+                <td><input type="text" name="name" placeholder="Your Screenname" style="background: #000000; color: #00FF00; border: 2px dashed #FFFF00;"></td>
+            </tr>
+            <tr>
+                <td>message</td>
+                <td><textarea name="message" rows="3" placeholder="Type like it's 2002..." style="background: #000000; color: #00FF00; border: 2px dashed #FFFF00; width: 100%;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit" style="background: #0000FF; color: #FFFFFF; font-family: 'Comic Sans MS'; padding: 5px 10px; border: 3px outset #FF0000;">
+                      POST TO GUESTBOOK
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Guestbook Entries Display (Static Example) -->
+    <div class="guestbook-entries" style="margin-top: 20px; text-align: left; max-width: 500px;">
+        <h3>RECENT POSTS:</h3>
+        <div style="background: #000000; padding: 10px; border: 1px dotted #00FFFF;">
+            <p><strong>cyberjuan_69:</strong> "first post!!! ur website is da bomb!!!"</p>
+            <p style="color: #FF9900;">Posted: 12/25/2004 11:59 PM</p>
+        </div>
+        <div style="background: #000000; padding: 10px; border: 1px dotted #00FFFF; margin-top: 5px;">
+            <p><strong>manila_dreamer:</strong> "remember Friendster  😭"</p>
+            <p style="color: #FF9900;">Posted: 01/01/2005 12:01 AM</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
